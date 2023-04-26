@@ -1,0 +1,12 @@
+{
+  "gamerule.allowCoinDropsGameRule": "allowCoinDrops",
+  "itemGroup.fantastical_lands.fantastical_lands_tab": "Fantastical Lands",
+  "item.fantastical_lands.iron_coin": "Iron Coin",
+  "item.fantastical_lands.emerald_coin": "Emerald Coin",
+  "item.fantastical_lands.netherite_coin": "Netherite Coin",
+  "gamerule.allowCoinDropsGameRule.description": "Should entities drop coins?",
+  "item.fantastical_lands.gold_coin": "Gold Coin",
+  "gui.fantastical_lands.xp_forge_gui.label_xp_forge": "XP Forge",
+  "item.fantastical_lands.xp_token": "XP Token",
+  "block.fantastical_lands.xp_forge": "Xp Forge"
+}

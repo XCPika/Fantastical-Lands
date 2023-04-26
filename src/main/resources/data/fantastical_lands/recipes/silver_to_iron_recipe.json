@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dotcoinmod:iron_coin"
+    }
+  ],
+  "result": {
+    "item": "fantastical_lands:iron_coin",
+    "count": 1
+  }
+}

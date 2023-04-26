@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "fantastical_lands:items/skill_orb"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "fantastical_lands:blocks/xp_forge_other",
+    "up": "fantastical_lands:blocks/xp_forge_top",
+    "north": "fantastical_lands:blocks/xp_forge_front",
+    "east": "fantastical_lands:blocks/xp_forge_side",
+    "south": "fantastical_lands:blocks/xp_forge_other",
+    "west": "fantastical_lands:blocks/xp_forge_side",
+    "particle": "fantastical_lands:blocks/xp_forge_other"
+  }
+}

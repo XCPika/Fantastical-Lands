@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "fantastical_lands",
+  "version": "1.0.0",
+  "name": "Fantastical Lands",
+  "description": "A custom mod designed specifically for the Fantastical Lands server.",
+  "authors": [
+    "themightmage"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+  "license": "Academic Free License v3.0",
+  "accessWidener": "fantastical_lands.accesswidener",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.themightmage.fantasticallands.FantasticalLandsMod"
+    ],
+    "client": [
+      "net.themightmage.fantasticallands.ClientInit"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17",
+    "dotcoinmod": "*"
+  },
+  "mixins": [
+    "fantastical_lands.mixins.json"
+  ]
+}

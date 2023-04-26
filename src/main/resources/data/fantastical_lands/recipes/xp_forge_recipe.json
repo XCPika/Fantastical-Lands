@@ -1,0 +1,42 @@
+{
+  "group": "smelting",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:chiseled_stone_bricks"
+    },
+    "1": {
+      "item": "fantastical_lands:gold_coin"
+    },
+    "2": {
+      "item": "minecraft:chiseled_stone_bricks"
+    },
+    "3": {
+      "item": "minecraft:experience_bottle"
+    },
+    "4": {
+      "item": "minecraft:furnace"
+    },
+    "5": {
+      "item": "minecraft:experience_bottle"
+    },
+    "6": {
+      "item": "minecraft:chiseled_stone_bricks"
+    },
+    "7": {
+      "item": "minecraft:chiseled_stone_bricks"
+    },
+    "8": {
+      "item": "minecraft:chiseled_stone_bricks"
+    }
+  },
+  "result": {
+    "item": "fantastical_lands:xp_forge",
+    "count": 1
+  }
+}

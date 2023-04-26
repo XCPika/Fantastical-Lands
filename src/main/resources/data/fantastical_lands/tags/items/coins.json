@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "fantastical_lands:iron_coin",
+    "fantastical_lands:emerald_coin",
+    "fantastical_lands:netherite_coin",
+    "fantastical_lands:gold_coin"
+  ]
+}
