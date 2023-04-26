@@ -1,4 +1,5 @@
-# ![Fantastical Lands Logo](https://github.com/XCPika/Fantastical-Lands/blob/main/icon_wo_bg.png?raw=true) Fantastical Lands 
+# Fantastical Lands 
+![Fantastical Lands Logo](https://github.com/XCPika/Fantastical-Lands/blob/main/icon_wo_bg.png?raw=true)
 This mod is designed to be used with a private 1.19.2 Fabric Minecraft server. This mod may contain content that does not work correctly without our other custom content (Datapacks/Resource Packs).
 Our other custom content will also be hosted GitHub under the same licences.
 
