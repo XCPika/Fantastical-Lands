@@ -3,6 +3,15 @@
 This mod is designed to be used with a private 1.19.2 Fabric Minecraft server. This mod may contain content that does not work correctly without our other custom content (Datapacks/Resource Packs).
 Our other custom content will also be hosted GitHub under the same licences.
 
+## Setup
+
+To run the mod in a test environment (Using VS Code) you need to run these commands in a VS Code PS Terminal.
+```
+./gradlew vscode
+./gradlew genSources
+```
+
+
 ## License
 
 Creative Commons Legal Code
