@@ -10,7 +10,10 @@ To run the mod in a test environment (Using VS Code) you need to run these comma
 ./gradlew vscode
 ./gradlew genSources
 ```
-
+To export the mod as a .jar for usage with Minecraft run this command in a VS Code PS Terminal.
+```
+./gradlew build
+```
 
 ## License
 
