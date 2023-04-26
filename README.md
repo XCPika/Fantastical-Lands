@@ -14,6 +14,8 @@ To export the mod as a .jar for usage with Minecraft run this command in a VS Co
 ```
 ./gradlew build
 ```
+- [Setup](https://github.com/XCPika/Fantastical-Lands/tree/main#setup)
+- [License](https://github.com/XCPika/Fantastical-Lands/tree/main#license)
 
 ## License
 
