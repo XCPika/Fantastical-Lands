@@ -18,7 +18,8 @@ To export the mod as a .jar for usage with Minecraft run this command in a VS Co
 
 ## Credits
 **Thank you to all these people, who without I would not have been able to figure this out.**
--[Serilum](https://github.com/ricksouth) For there incredible attention to detail and small segmented mods that were incredibly helpful learning to make this project
+
+- [Serilum](https://github.com/ricksouth) - For there incredible attention to detail and small segmented mods that were incredibly helpful learning to make this project
 
 ## License
 
