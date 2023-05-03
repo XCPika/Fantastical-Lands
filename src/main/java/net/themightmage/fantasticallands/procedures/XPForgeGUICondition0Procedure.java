@@ -1,7 +1,6 @@
 package net.themightmage.fantasticallands.procedures;
 
 import net.themightmage.fantasticallands.FantasticalLandsMod;
-
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.core.BlockPos;
@@ -35,13 +34,8 @@ public class XPForgeGUICondition0Procedure {
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		return new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getExtraCustomData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(x, y, z), "timer") > 0;
+		BlockEntity blockEntity = world.getBlockEntity(new BlockPos(x, y, z));
+		if (blockEntity != null) return blockEntity.getExtraCustomData().getDouble("timer") == 0;
+		return false;
 	}
 }

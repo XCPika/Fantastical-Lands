@@ -2,18 +2,15 @@
 package net.themightmage.fantasticallands.client.gui;
 
 import net.themightmage.fantasticallands.world.inventory.XPForgeGUIMenu;
-import net.themightmage.fantasticallands.procedures.XPForgeGUIProgress0Procedure;
-import net.themightmage.fantasticallands.procedures.XPForgeGUICondition3Procedure;
-import net.themightmage.fantasticallands.procedures.XPForgeGUICondition2Procedure;
-import net.themightmage.fantasticallands.procedures.XPForgeGUICondition1Procedure;
-import net.themightmage.fantasticallands.procedures.XPForgeGUICondition0Procedure;
 
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
 
 import java.util.HashMap;
@@ -40,6 +37,12 @@ public class XPForgeGUIScreen extends AbstractContainerScreen<XPForgeGUIMenu> {
 
 	private static final ResourceLocation texture = new ResourceLocation("fantastical_lands:textures/screens/xp_forge_gui.png");
 
+	private final boolean timerPassed(double i) {
+		BlockEntity blockEntity = world.getBlockEntity(new BlockPos(x, y, z));
+		if (blockEntity != null) return blockEntity.getExtraCustomData().getDouble("timer") == i;
+		return false;
+	};
+
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
@@ -61,25 +64,21 @@ public class XPForgeGUIScreen extends AbstractContainerScreen<XPForgeGUIMenu> {
 		RenderSystem.setShaderTexture(0, new ResourceLocation("fantastical_lands:textures/screens/gray_arrow.png"));
 		this.blit(ms, this.leftPos + 43, this.topPos + 21, 0, 0, 16, 16, 16, 16);
 
-		if (XPForgeGUIProgress0Procedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("world", world).put("x", x).put("y", y).put("z", z).build())) {
+		if (this.timerPassed(5)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("fantastical_lands:textures/screens/green_arrow_fill_1.png"));
 			this.blit(ms, this.leftPos + 43, this.topPos + 21, 0, 0, 16, 16, 16, 16);
 		}
-		if (XPForgeGUICondition1Procedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("world", world).put("x", x).put("y", y).put("z", z).build())) {
+		if (this.timerPassed(10)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("fantastical_lands:textures/screens/green_arrow_fill_2.png"));
 			this.blit(ms, this.leftPos + 43, this.topPos + 21, 0, 0, 16, 16, 16, 16);
 		}
-		if (XPForgeGUICondition2Procedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("world", world).put("x", x).put("y", y).put("z", z).build())) {
+		if (this.timerPassed(15)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("fantastical_lands:textures/screens/green_arrow_fill_3.png"));
 			this.blit(ms, this.leftPos + 43, this.topPos + 21, 0, 0, 16, 16, 16, 16);
 		}
-		if (XPForgeGUICondition3Procedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("world", world).put("x", x).put("y", y).put("z", z).build())) {
+		if (this.timerPassed(19)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("fantastical_lands:textures/screens/green_arrow_fill_4.png"));
 			this.blit(ms, this.leftPos + 43, this.topPos + 21, 0, 0, 16, 16, 16, 16);
-		}
-		if (XPForgeGUICondition0Procedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("world", world).put("x", x).put("y", y).put("z", z).build())) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("fantastical_lands:textures/screens/green_arrow_fill_1.png"));
-			this.blit(ms, this.leftPos + 83, this.topPos + 21, 0, 0, 16, 16, 16, 16);
 		}
 		RenderSystem.disableBlend();
 	}

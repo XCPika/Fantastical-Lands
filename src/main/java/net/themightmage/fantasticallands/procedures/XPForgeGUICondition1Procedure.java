@@ -35,16 +35,8 @@ public class XPForgeGUICondition1Procedure {
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		if ((new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getExtraCustomData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(x, y, z), "timer")) / 4 >= 5) {
-			return true;
-		}
+		BlockEntity blockEntity = world.getBlockEntity(new BlockPos(x, y, z));
+		if (blockEntity != null) return (blockEntity.getExtraCustomData().getDouble("timer") / 4) >= 5;
 		return false;
 	}
 }
